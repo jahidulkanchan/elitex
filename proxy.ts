@@ -1,12 +1,13 @@
-import { NextResponse, NextRequest } from 'next/server'
- 
-// This function can be marked `async` if using `await` inside
+import { NextResponse, NextRequest } from "next/server";
+
 export function proxy(request: NextRequest) {
-  return NextResponse.redirect(new URL('/home', request.url))
+  const isAllow = false;
+  if (!isAllow) {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+  return NextResponse.next();
 }
 
-NextResponse.next()
- 
 export const config = {
-  matcher: '/about/:path*',
-}
+  matcher: "/about/:path*",
+};
