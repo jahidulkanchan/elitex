@@ -7,6 +7,20 @@
   --color-sky-blue: #f1f0ff;
   --color-panton-purple: #e0d3f5;
   --color-off-blue: #151875;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-josefin-sans: var(--font-josefin-sans);
+  --font-lato: var(--font-lato);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Josefin Sans", sans-serif;
+  }
+  body, p {
+    font-family: "Lato", sans-serif;
+  }
 }
