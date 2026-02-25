@@ -33,8 +33,7 @@ export default function RootLayout({
         data-gr-ext-installed=""
         className={`${josefinSans.variable} ${lato.variable} antialiased`}
       >
-        {/* <AuthProvider>{children}</AuthProvider> */}
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
